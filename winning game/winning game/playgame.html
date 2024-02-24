@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    let winningNumber = 7;
+
+    let chances = 3;
+
+function playGame() {
+  while (chances > 0) {
+    let user = parseInt(prompt("Guess a number between 1 and 10:"));
+
+    if (user === winningNumber) {
+      alert("Congratulations! You guessed the winning number: " + winningNumber);
+    } else {
+      chances--;
+      if (chances > 0) {
+        alert("Wrong guess. You have " + chances + " chances left.");
+      } else {
+        alert("Sorry, you're out of chances. The winning number was " + winningNumber + ".");
+      }
+    }
+  }
+}
+
+playGame();
+
+    </script>
+</body>
+</html>
